@@ -7,6 +7,7 @@ import { Activity } from 'lucide-react'
 
 export default function LoginPage() {
   const router = useRouter()
+  const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [isSignUp, setIsSignUp] = useState(false)
@@ -22,7 +23,14 @@ export default function LoginPage() {
 
     try {
       if (isSignUp) {
-        const { error } = await supabase.auth.signUp({ email, password })
+        // Sign up with full name passed as metadata
+        const { error } = await supabase.auth.signUp({
+          email,
+          password,
+          options: {
+            data: { full_name: name }  // ← saved to raw_user_meta_data → profiles table
+          }
+        })
         if (error) throw error
         setMessage('Check your email for a confirmation link!')
       } else {
@@ -59,24 +67,41 @@ export default function LoginPage() {
           {/* Toggle */}
           <div className="flex bg-gray-100 rounded-lg p-1 mb-6">
             <button
-              onClick={() => { setIsSignUp(false); setError(''); setMessage('') }}
-              className={`flex-1 py-2 text-sm font-medium rounded-md transition-colors ${
-                !isSignUp ? 'bg-white shadow text-gray-900' : 'text-gray-500 hover:text-gray-700'
-              }`}
+              onClick={() => { setIsSignUp(false); setError(''); setMessage(''); setName('') }}
+              className={`flex-1 py-2 text-sm font-medium rounded-md transition-colors ${!isSignUp ? 'bg-white shadow text-gray-900' : 'text-gray-500 hover:text-gray-700'
+                }`}
             >
               Sign In
             </button>
             <button
               onClick={() => { setIsSignUp(true); setError(''); setMessage('') }}
-              className={`flex-1 py-2 text-sm font-medium rounded-md transition-colors ${
-                isSignUp ? 'bg-white shadow text-gray-900' : 'text-gray-500 hover:text-gray-700'
-              }`}
+              className={`flex-1 py-2 text-sm font-medium rounded-md transition-colors ${isSignUp ? 'bg-white shadow text-gray-900' : 'text-gray-500 hover:text-gray-700'
+                }`}
             >
               Sign Up
             </button>
           </div>
 
           <form onSubmit={handleAuth} className="space-y-4">
+
+            {/* Full Name — only shown on Sign Up */}
+            {isSignUp && (
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  value={name}
+                  onChange={e => setName(e.target.value)}
+                  placeholder="John Smith"
+                  required
+                  className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent"
+                />
+              </div>
+            )}
+
+            {/* Email */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1.5">
                 Email address
@@ -91,6 +116,7 @@ export default function LoginPage() {
               />
             </div>
 
+            {/* Password */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1.5">
                 Password
@@ -104,6 +130,9 @@ export default function LoginPage() {
                 minLength={6}
                 className="w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent"
               />
+              {isSignUp && (
+                <p className="text-xs text-gray-400 mt-1">Minimum 6 characters</p>
+              )}
             </div>
 
             {/* Error */}
@@ -132,6 +161,14 @@ export default function LoginPage() {
             </button>
           </form>
         </div>
+
+        {/* Footer note */}
+        {isSignUp && (
+          <p className="text-center text-xs text-gray-400 mt-4">
+            By signing up you agree to our terms of service
+          </p>
+        )}
+
       </div>
     </div>
   )

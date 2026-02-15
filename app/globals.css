@@ -2,10 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  box-sizing: border-box;
+:root {
+  --sapphire-lightest: #E7F0FA;
+  --sapphire-light:    #7BA4D0;
+  --sapphire-mid:      #2E5E99;
+  --sapphire-dark:     #0D2440;
 }
 
-body {
-  background: #f9fafb;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--sapphire-lightest);
+    color: var(--sapphire-dark);
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-playfair);
+  }
 }
+
+@layer utilities {
+  .font-playfair { font-family: var(--font-playfair); }
+  .font-lato     { font-family: var(--font-lato); }
+
+  .bg-sapphire-lightest { background-color: var(--sapphire-lightest); }
+  .bg-sapphire-light    { background-color: var(--sapphire-light); }
+  .bg-sapphire-mid      { background-color: var(--sapphire-mid); }
+  .bg-sapphire-dark     { background-color: var(--sapphire-dark); }
+
+  .text-sapphire-lightest { color: var(--sapphire-lightest); }
+  .text-sapphire-light    { color: var(--sapphire-light); }
+  .text-sapphire-mid      { color: var(--sapphire-mid); }
+  .text-sapphire-darkest  { color: var(--sapphire-dark); }
+
+  .border-sapphire-light { border-color: var(--sapphire-light); }
+  .border-sapphire-mid   { border-color: var(--sapphire-mid); }
+}
+
+/* Animated gradient background */
+.sapphire-gradient {
+  background: linear-gradient(135deg, var(--sapphire-dark) 0%, var(--sapphire-mid) 60%, var(--sapphire-light) 100%);
+}
+
+/* Glass card effect */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(123, 164, 208, 0.25);
+}
+
+/* Subtle mesh background */
+.mesh-bg {
+  background-color: var(--sapphire-lightest);
+  background-image:
+    radial-gradient(at 20% 20%, rgba(46,94,153,0.08) 0px, transparent 50%),
+    radial-gradient(at 80% 80%, rgba(13,36,64,0.06) 0px, transparent 50%),
+    radial-gradient(at 60% 10%, rgba(123,164,208,0.1) 0px, transparent 50%);
+}
+
+/* Shimmer loading animation */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer {
+  background: linear-gradient(90deg, #e7f0fa 25%, #d0e3f5 50%, #e7f0fa 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in-up {
+  animation: fadeInUp 0.5s ease forwards;
+}
+.fade-in-up-delay-1 { animation-delay: 0.1s; opacity: 0; animation-fill-mode: forwards; animation-name: fadeInUp; animation-duration: 0.5s; }
+.fade-in-up-delay-2 { animation-delay: 0.2s; opacity: 0; animation-fill-mode: forwards; animation-name: fadeInUp; animation-duration: 0.5s; }
+.fade-in-up-delay-3 { animation-delay: 0.3s; opacity: 0; animation-fill-mode: forwards; animation-name: fadeInUp; animation-duration: 0.5s; }
+.fade-in-up-delay-4 { animation-delay: 0.4s; opacity: 0; animation-fill-mode: forwards; animation-name: fadeInUp; animation-duration: 0.5s; }

@@ -1,0 +1,856 @@
+[00:00:01.304] Server  LOG     ✓ Ready in 851ms
+[00:00:05.478] Server  ERROR   ⨯ ./app/dashboard/page.tsx:3:1
+Ecmascript file had an error
+  1 | export const dynamic = 'force-dynamic'
+  2 |
+> 3 | 'use client'
+    | ^^^^^^^^^^^^
+  4 |
+  5 | import { useEffect, useState } from 'react'
+  6 | import { supabase } from '@/lib/supabase'
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+
+
+
+./app/dashboard/page.tsx:5:10
+Ecmascript file had an error
+  3 | 'use client'
+  4 |
+> 5 | import { useEffect, useState } from 'react'
+    |          ^^^^^^^^^
+  6 | import { supabase } from '@/lib/supabase'
+  7 | import Link from 'next/link'
+  8 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+
+./app/dashboard/page.tsx:8:10
+Ecmascript file had an error
+   6 | import { supabase } from '@/lib/supabase'
+   7 | import Link from 'next/link'
+>  8 | import { useRouter } from 'next/navigation'
+     |          ^^^^^^^^^
+   9 | import { TrendingUp, Users, Activity, Plus, LogOut, BarChart2, Globe } from 'lucide-react'
+  10 |
+  11 | interface Project {
+
+You're importing a component that needs `useRouter`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+
+./app/dashboard/page.tsx:5:21
+Ecmascript file had an error
+  3 | 'use client'
+  4 |
+> 5 | import { useEffect, useState } from 'react'
+    |                     ^^^^^^^^
+  6 | import { supabase } from '@/lib/supabase'
+  7 | import Link from 'next/link'
+  8 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:00:06.226] Browser ERROR   uncaughtError: Error: ./app/dashboard/page.tsx:3:1
+Ecmascript file had an error
+  1 | export const dynamic = 'force-dynamic'
+  2 |
+> 3 | 'use client'
+    | ^^^^^^^^^^^^
+  4 |
+  5 | import { useEffect, useState } from 'react'
+  6 | import { supabase } from '@/lib/supabase'
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+
+
+[00:00:07.182] Browser ERROR   ./app/dashboard/page.tsx:3:1
+Ecmascript file had an error
+  1 | export const dynamic = 'force-dynamic'
+  2 |
+> 3 | 'use client'
+    | ^^^^^^^^^^^^
+  4 |
+  5 | import { useEffect, useState } from 'react'
+  6 | import { supabase } from '@/lib/supabase'
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+[00:00:07.182] Browser ERROR   ./app/dashboard/page.tsx:5:10
+Ecmascript file had an error
+  3 | 'use client'
+  4 |
+> 5 | import { useEffect, useState } from 'react'
+    |          ^^^^^^^^^
+  6 | import { supabase } from '@/lib/supabase'
+  7 | import Link from 'next/link'
+  8 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:00:07.182] Browser ERROR   ./app/dashboard/page.tsx:8:10
+Ecmascript file had an error
+   6 | import { supabase } from '@/lib/supabase'
+   7 | import Link from 'next/link'
+>  8 | import { useRouter } from 'next/navigation'
+     |          ^^^^^^^^^
+   9 | import { TrendingUp, Users, Activity, Plus, LogOut, BarChart2, Globe } from 'lucide-react'
+  10 |
+  11 | interface Project {
+
+You're importing a component that needs `useRouter`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:00:07.182] Browser ERROR   ./app/dashboard/page.tsx:5:21
+Ecmascript file had an error
+  3 | 'use client'
+  4 |
+> 5 | import { useEffect, useState } from 'react'
+    |                     ^^^^^^^^
+  6 | import { supabase } from '@/lib/supabase'
+  7 | import Link from 'next/link'
+  8 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:00:07.182] Browser ERROR   ./app/dashboard/page.tsx:3:1
+Ecmascript file had an error
+  1 | export const dynamic = 'force-dynamic'
+  2 |
+> 3 | 'use client'
+    | ^^^^^^^^^^^^
+  4 |
+  5 | import { useEffect, useState } from 'react'
+  6 | import { supabase } from '@/lib/supabase'
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+[00:00:07.182] Browser ERROR   ./app/dashboard/page.tsx:5:10
+Ecmascript file had an error
+  3 | 'use client'
+  4 |
+> 5 | import { useEffect, useState } from 'react'
+    |          ^^^^^^^^^
+  6 | import { supabase } from '@/lib/supabase'
+  7 | import Link from 'next/link'
+  8 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:00:07.182] Browser ERROR   ./app/dashboard/page.tsx:8:10
+Ecmascript file had an error
+   6 | import { supabase } from '@/lib/supabase'
+   7 | import Link from 'next/link'
+>  8 | import { useRouter } from 'next/navigation'
+     |          ^^^^^^^^^
+   9 | import { TrendingUp, Users, Activity, Plus, LogOut, BarChart2, Globe } from 'lucide-react'
+  10 |
+  11 | interface Project {
+
+You're importing a component that needs `useRouter`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:00:07.182] Browser ERROR   ./app/dashboard/page.tsx:5:21
+Ecmascript file had an error
+  3 | 'use client'
+  4 |
+> 5 | import { useEffect, useState } from 'react'
+    |                     ^^^^^^^^
+  6 | import { supabase } from '@/lib/supabase'
+  7 | import Link from 'next/link'
+  8 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:00:07.182] Browser ERROR   ./app/dashboard/page.tsx:3:1
+Ecmascript file had an error
+  1 | export const dynamic = 'force-dynamic'
+  2 |
+> 3 | 'use client'
+    | ^^^^^^^^^^^^
+  4 |
+  5 | import { useEffect, useState } from 'react'
+  6 | import { supabase } from '@/lib/supabase'
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+[00:00:07.182] Browser ERROR   ./app/dashboard/page.tsx:5:10
+Ecmascript file had an error
+  3 | 'use client'
+  4 |
+> 5 | import { useEffect, useState } from 'react'
+    |          ^^^^^^^^^
+  6 | import { supabase } from '@/lib/supabase'
+  7 | import Link from 'next/link'
+  8 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:00:07.182] Browser ERROR   ./app/dashboard/page.tsx:8:10
+Ecmascript file had an error
+   6 | import { supabase } from '@/lib/supabase'
+   7 | import Link from 'next/link'
+>  8 | import { useRouter } from 'next/navigation'
+     |          ^^^^^^^^^
+   9 | import { TrendingUp, Users, Activity, Plus, LogOut, BarChart2, Globe } from 'lucide-react'
+  10 |
+  11 | interface Project {
+
+You're importing a component that needs `useRouter`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:00:07.182] Browser ERROR   ./app/dashboard/page.tsx:5:21
+Ecmascript file had an error
+  3 | 'use client'
+  4 |
+> 5 | import { useEffect, useState } from 'react'
+    |                     ^^^^^^^^
+  6 | import { supabase } from '@/lib/supabase'
+  7 | import Link from 'next/link'
+  8 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:00:30.182] Browser ERROR   ./app/dashboard/page.tsx:2:1
+Ecmascript file had an error
+  1 | export const dynamic = 'force-dynamic'
+> 2 | 'use client'
+    | ^^^^^^^^^^^^
+  3 |
+  4 | import { useEffect, useState } from 'react'
+  5 | import { supabase } from '@/lib/supabase'
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+[00:00:30.182] Browser ERROR   ./app/dashboard/page.tsx:4:10
+Ecmascript file had an error
+  2 | 'use client'
+  3 |
+> 4 | import { useEffect, useState } from 'react'
+    |          ^^^^^^^^^
+  5 | import { supabase } from '@/lib/supabase'
+  6 | import Link from 'next/link'
+  7 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:00:30.182] Browser ERROR   ./app/dashboard/page.tsx:7:10
+Ecmascript file had an error
+   5 | import { supabase } from '@/lib/supabase'
+   6 | import Link from 'next/link'
+>  7 | import { useRouter } from 'next/navigation'
+     |          ^^^^^^^^^
+   8 | import { TrendingUp, Users, Activity, Plus, LogOut, BarChart2, Globe } from 'lucide-react'
+   9 |
+  10 | interface Project {
+
+You're importing a component that needs `useRouter`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:00:30.182] Browser ERROR   ./app/dashboard/page.tsx:4:21
+Ecmascript file had an error
+  2 | 'use client'
+  3 |
+> 4 | import { useEffect, useState } from 'react'
+    |                     ^^^^^^^^
+  5 | import { supabase } from '@/lib/supabase'
+  6 | import Link from 'next/link'
+  7 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:00:54.189] Browser ERROR   ./app/dashboard/page.tsx:2:1
+Ecmascript file had an error
+  1 | export const dynamic = 'force-dynamic'
+> 2 | 'use client'
+    | ^^^^^^^^^^^^
+  3 | import { useEffect, useState } from 'react'
+  4 | import { supabase } from '@/lib/supabase'
+  5 | import Link from 'next/link'
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+[00:00:54.189] Browser ERROR   ./app/dashboard/page.tsx:3:10
+Ecmascript file had an error
+  1 | export const dynamic = 'force-dynamic'
+  2 | 'use client'
+> 3 | import { useEffect, useState } from 'react'
+    |          ^^^^^^^^^
+  4 | import { supabase } from '@/lib/supabase'
+  5 | import Link from 'next/link'
+  6 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:00:54.189] Browser ERROR   ./app/dashboard/page.tsx:6:10
+Ecmascript file had an error
+  4 | import { supabase } from '@/lib/supabase'
+  5 | import Link from 'next/link'
+> 6 | import { useRouter } from 'next/navigation'
+    |          ^^^^^^^^^
+  7 | import { TrendingUp, Users, Activity, Plus, LogOut, BarChart2, Globe } from 'lucide-react'
+  8 |
+  9 | interface Project {
+
+You're importing a component that needs `useRouter`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:00:54.189] Browser ERROR   ./app/dashboard/page.tsx:3:21
+Ecmascript file had an error
+  1 | export const dynamic = 'force-dynamic'
+  2 | 'use client'
+> 3 | import { useEffect, useState } from 'react'
+    |                     ^^^^^^^^
+  4 | import { supabase } from '@/lib/supabase'
+  5 | import Link from 'next/link'
+  6 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:00:58.719] Server  ERROR   ⨯ ./app/dashboard/page.tsx:2:1
+Ecmascript file had an error
+  1 | export const dynamic = 'force-dynamic'
+> 2 | 'use client'
+    | ^^^^^^^^^^^^
+  3 | import { useEffect, useState } from 'react'
+  4 | import { supabase } from '@/lib/supabase'
+  5 | import Link from 'next/link'
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+
+
+
+./app/dashboard/page.tsx:3:10
+Ecmascript file had an error
+  1 | export const dynamic = 'force-dynamic'
+  2 | 'use client'
+> 3 | import { useEffect, useState } from 'react'
+    |          ^^^^^^^^^
+  4 | import { supabase } from '@/lib/supabase'
+  5 | import Link from 'next/link'
+  6 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+
+./app/dashboard/page.tsx:6:10
+Ecmascript file had an error
+  4 | import { supabase } from '@/lib/supabase'
+  5 | import Link from 'next/link'
+> 6 | import { useRouter } from 'next/navigation'
+    |          ^^^^^^^^^
+  7 | import { TrendingUp, Users, Activity, Plus, LogOut, BarChart2, Globe } from 'lucide-react'
+  8 |
+  9 | interface Project {
+
+You're importing a component that needs `useRouter`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+
+./app/dashboard/page.tsx:3:21
+Ecmascript file had an error
+  1 | export const dynamic = 'force-dynamic'
+  2 | 'use client'
+> 3 | import { useEffect, useState } from 'react'
+    |                     ^^^^^^^^
+  4 | import { supabase } from '@/lib/supabase'
+  5 | import Link from 'next/link'
+  6 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:00:59.079] Browser ERROR   uncaughtError: Error: ./app/dashboard/page.tsx:2:1
+Ecmascript file had an error
+  1 | export const dynamic = 'force-dynamic'
+> 2 | 'use client'
+    | ^^^^^^^^^^^^
+  3 | import { useEffect, useState } from 'react'
+  4 | import { supabase } from '@/lib/supabase'
+  5 | import Link from 'next/link'
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+
+
+[00:00:59.288] Browser ERROR   ./app/dashboard/page.tsx:2:1
+Ecmascript file had an error
+  1 | export const dynamic = 'force-dynamic'
+> 2 | 'use client'
+    | ^^^^^^^^^^^^
+  3 | import { useEffect, useState } from 'react'
+  4 | import { supabase } from '@/lib/supabase'
+  5 | import Link from 'next/link'
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+[00:00:59.289] Browser ERROR   ./app/dashboard/page.tsx:3:10
+Ecmascript file had an error
+  1 | export const dynamic = 'force-dynamic'
+  2 | 'use client'
+> 3 | import { useEffect, useState } from 'react'
+    |          ^^^^^^^^^
+  4 | import { supabase } from '@/lib/supabase'
+  5 | import Link from 'next/link'
+  6 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:00:59.289] Browser ERROR   ./app/dashboard/page.tsx:6:10
+Ecmascript file had an error
+  4 | import { supabase } from '@/lib/supabase'
+  5 | import Link from 'next/link'
+> 6 | import { useRouter } from 'next/navigation'
+    |          ^^^^^^^^^
+  7 | import { TrendingUp, Users, Activity, Plus, LogOut, BarChart2, Globe } from 'lucide-react'
+  8 |
+  9 | interface Project {
+
+You're importing a component that needs `useRouter`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:00:59.289] Browser ERROR   ./app/dashboard/page.tsx:3:21
+Ecmascript file had an error
+  1 | export const dynamic = 'force-dynamic'
+  2 | 'use client'
+> 3 | import { useEffect, useState } from 'react'
+    |                     ^^^^^^^^
+  4 | import { supabase } from '@/lib/supabase'
+  5 | import Link from 'next/link'
+  6 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:00:59.289] Browser ERROR   ./app/dashboard/page.tsx:2:1
+Ecmascript file had an error
+  1 | export const dynamic = 'force-dynamic'
+> 2 | 'use client'
+    | ^^^^^^^^^^^^
+  3 | import { useEffect, useState } from 'react'
+  4 | import { supabase } from '@/lib/supabase'
+  5 | import Link from 'next/link'
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+[00:00:59.289] Browser ERROR   ./app/dashboard/page.tsx:3:10
+Ecmascript file had an error
+  1 | export const dynamic = 'force-dynamic'
+  2 | 'use client'
+> 3 | import { useEffect, useState } from 'react'
+    |          ^^^^^^^^^
+  4 | import { supabase } from '@/lib/supabase'
+  5 | import Link from 'next/link'
+  6 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:00:59.289] Browser ERROR   ./app/dashboard/page.tsx:6:10
+Ecmascript file had an error
+  4 | import { supabase } from '@/lib/supabase'
+  5 | import Link from 'next/link'
+> 6 | import { useRouter } from 'next/navigation'
+    |          ^^^^^^^^^
+  7 | import { TrendingUp, Users, Activity, Plus, LogOut, BarChart2, Globe } from 'lucide-react'
+  8 |
+  9 | interface Project {
+
+You're importing a component that needs `useRouter`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:00:59.289] Browser ERROR   ./app/dashboard/page.tsx:3:21
+Ecmascript file had an error
+  1 | export const dynamic = 'force-dynamic'
+  2 | 'use client'
+> 3 | import { useEffect, useState } from 'react'
+    |                     ^^^^^^^^
+  4 | import { supabase } from '@/lib/supabase'
+  5 | import Link from 'next/link'
+  6 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:01:51.489] Server  LOG     ✓ Compiled in 73ms
+[00:01:52.511] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:56.447] Server  ERROR   ⨯ ./app/dashboard/projects/[id]/page.tsx:480:1
+Ecmascript file had an error
+  478 |
+  479 | export const dynamic = 'force-dynamic'
+> 480 | 'use client'
+      | ^^^^^^^^^^^^
+  481 |
+  482 | import { useEffect, useState } from 'react'
+  483 | import { supabase } from '@/lib/supabase'
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+
+
+
+./app/dashboard/projects/[id]/page.tsx:482:10
+Ecmascript file had an error
+  480 | 'use client'
+  481 |
+> 482 | import { useEffect, useState } from 'react'
+      |          ^^^^^^^^^
+  483 | import { supabase } from '@/lib/supabase'
+  484 | import Link from 'next/link'
+  485 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+
+./app/dashboard/projects/[id]/page.tsx:485:10
+Ecmascript file had an error
+  483 | import { supabase } from '@/lib/supabase'
+  484 | import Link from 'next/link'
+> 485 | import { useRouter } from 'next/navigation'
+      |          ^^^^^^^^^
+  486 | import { TrendingUp, Users, Activity, Plus, LogOut, BarChart2, Globe } from 'lucide-react'
+  487 |
+  488 | interface Project {
+
+You're importing a component that needs `useRouter`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+
+./app/dashboard/projects/[id]/page.tsx:482:21
+Ecmascript file had an error
+  480 | 'use client'
+  481 |
+> 482 | import { useEffect, useState } from 'react'
+      |                     ^^^^^^^^
+  483 | import { supabase } from '@/lib/supabase'
+  484 | import Link from 'next/link'
+  485 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:01:56.541] Browser ERROR   ./app/dashboard/projects/[id]/page.tsx:480:1
+Ecmascript file had an error
+  478 |
+  479 | export const dynamic = 'force-dynamic'
+> 480 | 'use client'
+      | ^^^^^^^^^^^^
+  481 |
+  482 | import { useEffect, useState } from 'react'
+  483 | import { supabase } from '@/lib/supabase'
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+[00:01:56.541] Browser ERROR   ./app/dashboard/projects/[id]/page.tsx:482:10
+Ecmascript file had an error
+  480 | 'use client'
+  481 |
+> 482 | import { useEffect, useState } from 'react'
+      |          ^^^^^^^^^
+  483 | import { supabase } from '@/lib/supabase'
+  484 | import Link from 'next/link'
+  485 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:01:56.541] Browser ERROR   ./app/dashboard/projects/[id]/page.tsx:485:10
+Ecmascript file had an error
+  483 | import { supabase } from '@/lib/supabase'
+  484 | import Link from 'next/link'
+> 485 | import { useRouter } from 'next/navigation'
+      |          ^^^^^^^^^
+  486 | import { TrendingUp, Users, Activity, Plus, LogOut, BarChart2, Globe } from 'lucide-react'
+  487 |
+  488 | interface Project {
+
+You're importing a component that needs `useRouter`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:01:56.541] Browser ERROR   ./app/dashboard/projects/[id]/page.tsx:482:21
+Ecmascript file had an error
+  480 | 'use client'
+  481 |
+> 482 | import { useEffect, useState } from 'react'
+      |                     ^^^^^^^^
+  483 | import { supabase } from '@/lib/supabase'
+  484 | import Link from 'next/link'
+  485 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:01:56.647] Browser ERROR   ./app/dashboard/projects/[id]/page.tsx:480:1
+Ecmascript file had an error
+  478 |
+  479 | export const dynamic = 'force-dynamic'
+> 480 | 'use client'
+      | ^^^^^^^^^^^^
+  481 |
+  482 | import { useEffect, useState } from 'react'
+  483 | import { supabase } from '@/lib/supabase'
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+[00:01:56.647] Browser ERROR   ./app/dashboard/projects/[id]/page.tsx:482:10
+Ecmascript file had an error
+  480 | 'use client'
+  481 |
+> 482 | import { useEffect, useState } from 'react'
+      |          ^^^^^^^^^
+  483 | import { supabase } from '@/lib/supabase'
+  484 | import Link from 'next/link'
+  485 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:01:56.647] Browser ERROR   ./app/dashboard/projects/[id]/page.tsx:485:10
+Ecmascript file had an error
+  483 | import { supabase } from '@/lib/supabase'
+  484 | import Link from 'next/link'
+> 485 | import { useRouter } from 'next/navigation'
+      |          ^^^^^^^^^
+  486 | import { TrendingUp, Users, Activity, Plus, LogOut, BarChart2, Globe } from 'lucide-react'
+  487 |
+  488 | interface Project {
+
+You're importing a component that needs `useRouter`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:01:56.647] Browser ERROR   ./app/dashboard/projects/[id]/page.tsx:482:21
+Ecmascript file had an error
+  480 | 'use client'
+  481 |
+> 482 | import { useEffect, useState } from 'react'
+      |                     ^^^^^^^^
+  483 | import { supabase } from '@/lib/supabase'
+  484 | import Link from 'next/link'
+  485 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:01:56.870] Server  ERROR   ⨯ ./app/dashboard/projects/[id]/page.tsx:480:1
+Ecmascript file had an error
+  478 |
+  479 | export const dynamic = 'force-dynamic'
+> 480 | 'use client'
+      | ^^^^^^^^^^^^
+  481 |
+  482 | import { useEffect, useState } from 'react'
+  483 | import { supabase } from '@/lib/supabase'
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+
+
+
+./app/dashboard/projects/[id]/page.tsx:482:10
+Ecmascript file had an error
+  480 | 'use client'
+  481 |
+> 482 | import { useEffect, useState } from 'react'
+      |          ^^^^^^^^^
+  483 | import { supabase } from '@/lib/supabase'
+  484 | import Link from 'next/link'
+  485 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+
+./app/dashboard/projects/[id]/page.tsx:485:10
+Ecmascript file had an error
+  483 | import { supabase } from '@/lib/supabase'
+  484 | import Link from 'next/link'
+> 485 | import { useRouter } from 'next/navigation'
+      |          ^^^^^^^^^
+  486 | import { TrendingUp, Users, Activity, Plus, LogOut, BarChart2, Globe } from 'lucide-react'
+  487 |
+  488 | interface Project {
+
+You're importing a component that needs `useRouter`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+
+./app/dashboard/projects/[id]/page.tsx:482:21
+Ecmascript file had an error
+  480 | 'use client'
+  481 |
+> 482 | import { useEffect, useState } from 'react'
+      |                     ^^^^^^^^
+  483 | import { supabase } from '@/lib/supabase'
+  484 | import Link from 'next/link'
+  485 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:01:57.253] Browser ERROR   uncaughtError: Error: ./app/dashboard/projects/[id]/page.tsx:480:1
+Ecmascript file had an error
+  478 |
+  479 | export const dynamic = 'force-dynamic'
+> 480 | 'use client'
+      | ^^^^^^^^^^^^
+  481 |
+  482 | import { useEffect, useState } from 'react'
+  483 | import { supabase } from '@/lib/supabase'
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+
+
+[00:01:57.440] Browser ERROR   ./app/dashboard/projects/[id]/page.tsx:480:1
+Ecmascript file had an error
+  478 |
+  479 | export const dynamic = 'force-dynamic'
+> 480 | 'use client'
+      | ^^^^^^^^^^^^
+  481 |
+  482 | import { useEffect, useState } from 'react'
+  483 | import { supabase } from '@/lib/supabase'
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+[00:01:57.440] Browser ERROR   ./app/dashboard/projects/[id]/page.tsx:482:10
+Ecmascript file had an error
+  480 | 'use client'
+  481 |
+> 482 | import { useEffect, useState } from 'react'
+      |          ^^^^^^^^^
+  483 | import { supabase } from '@/lib/supabase'
+  484 | import Link from 'next/link'
+  485 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:01:57.440] Browser ERROR   ./app/dashboard/projects/[id]/page.tsx:485:10
+Ecmascript file had an error
+  483 | import { supabase } from '@/lib/supabase'
+  484 | import Link from 'next/link'
+> 485 | import { useRouter } from 'next/navigation'
+      |          ^^^^^^^^^
+  486 | import { TrendingUp, Users, Activity, Plus, LogOut, BarChart2, Globe } from 'lucide-react'
+  487 |
+  488 | interface Project {
+
+You're importing a component that needs `useRouter`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:01:57.441] Browser ERROR   ./app/dashboard/projects/[id]/page.tsx:482:21
+Ecmascript file had an error
+  480 | 'use client'
+  481 |
+> 482 | import { useEffect, useState } from 'react'
+      |                     ^^^^^^^^
+  483 | import { supabase } from '@/lib/supabase'
+  484 | import Link from 'next/link'
+  485 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:01:57.441] Browser ERROR   ./app/dashboard/projects/[id]/page.tsx:480:1
+Ecmascript file had an error
+  478 |
+  479 | export const dynamic = 'force-dynamic'
+> 480 | 'use client'
+      | ^^^^^^^^^^^^
+  481 |
+  482 | import { useEffect, useState } from 'react'
+  483 | import { supabase } from '@/lib/supabase'
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+[00:01:57.441] Browser ERROR   ./app/dashboard/projects/[id]/page.tsx:482:10
+Ecmascript file had an error
+  480 | 'use client'
+  481 |
+> 482 | import { useEffect, useState } from 'react'
+      |          ^^^^^^^^^
+  483 | import { supabase } from '@/lib/supabase'
+  484 | import Link from 'next/link'
+  485 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:01:57.441] Browser ERROR   ./app/dashboard/projects/[id]/page.tsx:485:10
+Ecmascript file had an error
+  483 | import { supabase } from '@/lib/supabase'
+  484 | import Link from 'next/link'
+> 485 | import { useRouter } from 'next/navigation'
+      |          ^^^^^^^^^
+  486 | import { TrendingUp, Users, Activity, Plus, LogOut, BarChart2, Globe } from 'lucide-react'
+  487 |
+  488 | interface Project {
+
+You're importing a component that needs `useRouter`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:01:57.441] Browser ERROR   ./app/dashboard/projects/[id]/page.tsx:482:21
+Ecmascript file had an error
+  480 | 'use client'
+  481 |
+> 482 | import { useEffect, useState } from 'react'
+      |                     ^^^^^^^^
+  483 | import { supabase } from '@/lib/supabase'
+  484 | import Link from 'next/link'
+  485 | import { useRouter } from 'next/navigation'
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:02:30.837] Server  LOG     ✓ Compiled in 47ms
+[00:02:32.857] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
